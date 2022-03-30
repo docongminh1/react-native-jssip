@@ -1,12 +1,11 @@
-<p align="center"><a href="https://jssip.net"><img src="https://jssip.net/images/jssip-banner-new.png"/></a></p>
-
-[![Build Status](https://api.travis-ci.com/versatica/JsSIP.png)](https://travis-ci.com/versatica/JsSIP)
-[![Code Quality: Javascript](https://img.shields.io/lgtm/grade/javascript/g/versatica/JsSIP.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/versatica/JsSIP/context:javascript)
-[![Total Alerts](https://img.shields.io/lgtm/alerts/g/versatica/JsSIP.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/versatica/JsSIP/alerts)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/avodevelopment/RNJsSIP?label=RNJsSIPVersion)
+[![Code Quality: Javascript](https://img.shields.io/github/package-json/v/versatica/JsSip?label=JsSIPVersion)](https://lgtm.com/projects/g/versatica/JsSIP/context:javascript)
+[![Dependencies](https://img.shields.io/badge/dependencies-react--native--webrtc-green)](https://www.npmjs.com/package/react-native-webrtc)
+![License](https://img.shields.io/apm/l/vim-mode)
 
 ## Overview
 
-* Runs in the browser and Node.js.
+* Runs on android and ios
 * SIP over [WebSocket](https://jssip.net/documentation/misc/sip_websocket/) (use real SIP in your web apps)
 * Audio/video calls ([WebRTC](https://jssip.net/documentation/misc/webrtc)) and instant messaging
 * Lightweight!
@@ -17,15 +16,7 @@
 
 ## NOTE
 
-Starting from 3.0.0, JsSIP no longer includes the [rtcninja](https://github.com/eface2face/rtcninja.js/) module. However, the [jssip-rtcninja](https://www.npmjs.com/package/jssip-rtcninja) package is based on the `2.0.x` branch, which does include `rtcninja`.
-
-
-## Support
-
-* For questions or usage problems please use the **jssip** [public Google Group](https://groups.google.com/forum/#!forum/jssip).
-
-* For bug reports or feature requests open an [Github issue](https://github.com/versatica/JsSIP/issues).
-
+RFC 2833 is not implemented in react-native-webrtc, DTMF working only with INFO package
 
 ## Getting Started
 
@@ -72,22 +63,17 @@ var session = ua.call('sip:bob@example.com', options);
 Want to see more? Check the full documentation at https://jssip.net/documentation/.
 
 
-## Online Demo
-
-Check our **Tryit JsSIP** online demo:
-
-* [tryit.jssip.net](https://tryit.jssip.net)
-
-
 ## Website and Documentation
 
 * [jssip.net](https://jssip.net/)
 
 
-## Download
+## Usage
 
-* As Node module: `$ npm install jssip`
-* Manually: [jssip.net/download](https://jssip.net/download/)
+* Since is not published with npm, use refering this repo in your package.json
+```
+ "jssip": "git://github.com/avodevelopment/RNJsSIP.git#commit-ish"
+```
 
 
 ## Authors
