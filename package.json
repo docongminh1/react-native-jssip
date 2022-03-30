@@ -1,16 +1,18 @@
 {
   "name": "jssip",
-  "title": "JsSIP",
+  "title": "RNJsSIP",
   "description": "the Javascript SIP library",
-  "version": "3.9.0",
+  "version": "3.9.0.rn",
   "homepage": "https://jssip.net",
   "contributors": [
     "José Luis Millán <jmillan@aliax.net> (https://github.com/jmillan)",
     "Iñaki Baz Castillo <ibc@aliax.net> (https://inakibaz.me)"
   ],
   "types": "lib/JsSIP.d.ts",
-  "main": "lib-es5/JsSIP.js",
+  "main": "lib/JsSIP.js",
   "keywords": [
+    "react",
+    "native",
     "sip",
     "websocket",
     "webrtc",
@@ -19,13 +21,6 @@
     "library"
   ],
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/versatica/JsSIP.git"
-  },
-  "bugs": {
-    "url": "https://github.com/versatica/JsSIP/issues"
-  },
   "dependencies": {
     "@types/debug": "^4.1.5",
     "@types/node": "^14.14.34",
