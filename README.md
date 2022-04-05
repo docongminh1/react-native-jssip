@@ -1,4 +1,4 @@
-![GitHub package.json version](https://img.shields.io/github/package-json/v/avodevelopment/RNJsSIP?label=RNJsSIPVersion)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/avodevelopment/react-native-jssip?label=react-native-jssip)
 [![Code Quality: Javascript](https://img.shields.io/github/package-json/v/versatica/JsSip?label=JsSIPVersion)](https://lgtm.com/projects/g/versatica/JsSIP/context:javascript)
 [![Dependencies](https://img.shields.io/badge/dependencies-react--native--webrtc-green)](https://www.npmjs.com/package/react-native-webrtc)
 ![License](https://img.shields.io/apm/l/vim-mode)
