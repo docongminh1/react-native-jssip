@@ -168,6 +168,10 @@ export interface OutgoingEvent {
   response: IncomingResponse
 }
 
+export interface MediaStreamEvent {
+  response: object
+}
+
 // listener
 export type AnyListener = (...args: any[]) => void;
 export type PeerConnectionListener = (event: PeerConnectionEvent) => void;
@@ -190,6 +194,8 @@ export type UpdateListener = ReInviteListener;
 export type ReferListener = (event: ReferEvent) => void;
 export type SDPListener = (event: SDPEvent) => void;
 export type IceCandidateListener = (event: IceCandidateEvent) => void;
+
+export type MediaStreamListener = (event: MediaStreamEvent) => void;
 
 export interface RTCSessionEventMap {
   'peerconnection': PeerConnectionListener;
@@ -217,6 +223,9 @@ export interface RTCSessionEventMap {
   'peerconnection:createanswerfailed': AnyListener;
   'peerconnection:setlocaldescriptionfailed': AnyListener;
   'peerconnection:setremotedescriptionfailed': AnyListener;
+
+  'localStream': MediaStreamListener;
+  'remoteStream': MediaStreamListener;
 }
 
 declare enum SessionStatus {
