@@ -299,6 +299,8 @@ export class RTCSession extends EventEmitter {
 
   isMuted(): MediaConstraints;
 
+  switchCamera(options?: MediaConstraints): void;
+
   refer(target: string | URI, options?: ReferOptions): void;
 
   resetLocalMedia(): void;
