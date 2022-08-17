@@ -90,6 +90,10 @@ export interface OutgoingMessageEvent {
   request: OutgoingRequest;
 }
 
+export interface EndCallListenerEvent {
+  
+}
+
 export type UAConnectingListener = (event: UAConnectingEvent) => void;
 export type ConnectedListener = (event: ConnectedEvent) => void;
 export type DisconnectedListener = (event: DisconnectEvent) => void;
@@ -102,7 +106,9 @@ export type RTCSessionListener = IncomingRTCSessionListener | OutgoingRTCSession
 export type IncomingMessageListener = (event: IncomingMessageEvent) => void;
 export type OutgoingMessageListener = (event: OutgoingMessageEvent) => void;
 export type MessageListener = IncomingMessageListener | OutgoingMessageListener;
-export type SipEventListener = <T = any>(event: { event: T; request: IncomingRequest; }) => void
+export type SipEventListener = <T = any>(event: { event: T; request: IncomingRequest; }) => void;
+
+export type EndCallListener = (event: EndCallListenerEvent) => void;
 
 export interface UAEventMap {
   connecting: UAConnectingListener;
@@ -115,6 +121,8 @@ export interface UAEventMap {
   newRTCSession: RTCSessionListener;
   newMessage: MessageListener;
   sipEvent: SipEventListener;
+
+  endCallEvent: EndCallListener;
 }
 
 export interface UAContactOptions {
