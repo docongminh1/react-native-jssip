@@ -168,6 +168,10 @@ export interface OutgoingEvent {
   response: IncomingResponse
 }
 
+export interface ConnectionEvent {
+  response: object
+}
+
 export interface MediaStreamEvent {
   response: object
 }
@@ -195,6 +199,7 @@ export type ReferListener = (event: ReferEvent) => void;
 export type SDPListener = (event: SDPEvent) => void;
 export type IceCandidateListener = (event: IceCandidateEvent) => void;
 
+export type ConnectionListener = (event: ConnectionEvent) => void;
 export type MediaStreamListener = (event: MediaStreamEvent) => void;
 
 export interface RTCSessionEventMap {
@@ -226,6 +231,7 @@ export interface RTCSessionEventMap {
 
   'localStream': MediaStreamListener;
   'remoteStream': MediaStreamListener;
+  'connection': ConnectionListener;
 }
 
 declare enum SessionStatus {
